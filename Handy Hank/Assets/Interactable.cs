@@ -2,12 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+[RequireComponent(typeof(Collider2D), typeof(GameObject))]
 public class Interactable : MonoBehaviour
 {
     public GameObject player;
     public Collider2D ICollider;
-    void Update()
+    public DialogueObject realContent;
+    bool Interacted;
+    private void Awake()
     {
-        
+        ICollider = GetComponent<Collider2D>();
+        player = GetComponent<GameObject>();
     }
 }
