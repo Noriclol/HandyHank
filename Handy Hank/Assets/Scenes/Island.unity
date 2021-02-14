@@ -871,6 +871,7 @@ GameObject:
   - component: {fileID: 179844506}
   - component: {fileID: 179844510}
   - component: {fileID: 179844511}
+  - component: {fileID: 179844512}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -895,6 +896,7 @@ MonoBehaviour:
   animator: {fileID: 179844510}
   cam: {fileID: 837847281}
   closestInteractable: {fileID: 0}
+  ownInteractable: {fileID: 0}
   InventoryPanel: {fileID: 307584694}
   MessagePanel: {fileID: 1861650750}
   DialoguePanel: {fileID: 1034128429}
@@ -1032,6 +1034,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 2.125}
   m_EdgeRadius: 0
+--- !u!114 &179844512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179844505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c858253553d28149a58e42807dd8c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  ICollider: {fileID: 179844511}
+  content: {fileID: 0}
 --- !u!1 &196266010
 GameObject:
   m_ObjectHideFlags: 0
@@ -1043,7 +1060,7 @@ GameObject:
   - component: {fileID: 196266012}
   - component: {fileID: 196266011}
   m_Layer: 0
-  m_Name: Moe_pixel (1)
+  m_Name: characterMoe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1108,8 +1125,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 196266010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.65, y: 0.86, z: 0}
-  m_LocalScale: {x: 7.944442, y: 9.333332, z: 1}
+  m_LocalPosition: {x: 8.56, y: 3.26, z: 0}
+  m_LocalScale: {x: 10.120921, y: 11.890316, z: 1.2739626}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -1346,7 +1363,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 179844505}
   ICollider: {fileID: 530206671}
-  realContent: {fileID: 0}
+  content: {fileID: 0}
 --- !u!58 &530206671
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -13104,10 +13121,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26acf821dae9c534f861524ef5696a0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 0}
-  text: 
   player: {fileID: 179844505}
   DialoguePanel: {fileID: 1034128429}
+  finished: 0
+  page: 0
+  maxPage: 0
 --- !u!1 &1077353612
 GameObject:
   m_ObjectHideFlags: 0
@@ -13411,6 +13429,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1282771087}
   m_CullTransparentMesh: 0
+--- !u!1 &1462878007
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1462878008}
+  m_Layer: 0
+  m_Name: DialogueObjectHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1462878008
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462878007}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.63477373, y: -0.90174687, z: -81.95028}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1508982301
 GameObject:
   m_ObjectHideFlags: 0

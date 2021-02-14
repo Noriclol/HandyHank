@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
 	//Interactables
 	bool interactableClose = false;
 	public Interactable closestInteractable;
-
+	public DialogueObject ownInteractable; //made 
 	//UI
 	public GameObject InventoryPanel;
 	public GameObject MessagePanel;
@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
 
 	bool dlgAvalable = false, dlgClicked = false;
 
-	int currentdlgpage = 0;
+	
 
 	DialogueSysHandler dialogueHandler;
 
@@ -44,22 +44,23 @@ public class PlayerController : MonoBehaviour
 	private void Start()
 	{
 		dialogueHandler = DialoguePanel.GetComponent<DialogueSysHandler>();
+		ownInteractable = GetComponent<DialogueObject>();
 	}
 	//Collision
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
 		interactableClose = true;
 		closestInteractable = collision.GetComponent<Interactable>();
-
-
-
+		dialogueHandler.CollectInfo();
 		//Debug.Log(closestInteractable.content);
 	}
 	private void OnTriggerExit2D(Collider2D collision)
 	{
 		interactableClose = false;
-		closestInteractable = null;
+		//hanks thoughts implement route.
+		closestInteractable.content = ownInteractable;
 	}
+	//%%Collision%%
 	void MovementListener()
 	{
 		//movement
@@ -78,27 +79,43 @@ public class PlayerController : MonoBehaviour
 		}
 		cam.orthographicSize = cam.orthographicSize + scroll * 1.0f;
 	}
-	void DialogueButtonToggle(bool openClose) // main dialogue function
-	{
-		int page, size = closestInteractable.realContent.dialogueSize;
-		string text;
-		Sprite img;
+	void DialogueButtonToggle(bool openClose) {  // main dialogue function
+
+		
 		if (openClose) //if open
 		{
+			DialoguePanel.gameObject.SetActive(false);
+			dlgVisibility = false;
+			int page, size = dialogueHandler.maxPage;
+			string text;
+			Sprite img = GetComponent<SpriteRenderer>().sprite;
 			page = dialogueHandler.page;
-			text = closestInteractable.realContent.DialogueString[currentdlgpage];
-			img = closestInteractable.realContent.DialogueImages[currentdlgpage];
-			dialogueHandler.SetPageInfo(currentdlgpage, text, img);
+			text = closestInteractable.content.DialogueString[page];
+			img = closestInteractable.content.DialogueImages[page];
+			if(/*new dialogue*/closestInteractable.content.finished) { // if dlg Finished?
+				DialoguePanel.gameObject.SetActive(true);
+				dlgVisibility = true;
+			}
+			else if(closestInteractable.content.currentPage > closestInteractable.content.dialogueSize){ // if dlg currentpage
+				dialogueHandler.SetPageInfo(page, text, img);
+				dialogueHandler.page += 1;
+				if (dialogueHandler.page == dialogueHandler.maxPage)
+				{
+					dialogueHandler.finished = true;
+				}
+			}
+			dialogueHandler.SetInfo();
 		}
-		else // if close
-		{
-			dialogueHandler.SetPageInfo();
+        else
+        {
+			DialoguePanel.gameObject.SetActive(true);
+			dlgVisibility = true;
 		}
 	}
 	void KeyListener() // keylistener func, can probably be done better.
 	{
-		if (Input.GetKeyDown(KeyCode.I))
-			{
+		if (Input.GetKeyDown(KeyCode.I)/*Inventory*/)
+		{
 				Debug.Log("Input.Inventory: " + invVisibility);
 				if (invVisibility)//is active?
 				{ // set to true
@@ -113,8 +130,8 @@ public class PlayerController : MonoBehaviour
 					Debug.Log("setting to: " + invVisibility);
 				}
 			}
-		if (Input.GetKeyDown(KeyCode.M))
-			{
+		if (Input.GetKeyDown(KeyCode.M)/*messagetab*/)
+		{
 				Debug.Log("Input.Message: " + msgVisibility);
 				if (msgVisibility)//is active?
 				{
@@ -129,23 +146,15 @@ public class PlayerController : MonoBehaviour
 					Debug.Log("setting to: " + msgVisibility);
 				} // no	
 			}
-		if (Input.GetKeyDown(KeyCode.Return)/* && interactableClose == true */) //for implementation of interactables
-		{
-			Debug.Log("Input.Message");
-			if (dlgVisibility)//is active?
-			{
-				DialoguePanel.gameObject.SetActive(false);
-				dlgVisibility = false;
-				DialogueButtonToggle(dlgVisibility);
-			}// yes
-			else
-			{
-				DialoguePanel.gameObject.SetActive(true);
-				dlgVisibility = true;
-				DialogueButtonToggle(dlgVisibility);
-			} // no	
-		}
-	}
+		if (Input.GetKeyDown(KeyCode.F)/*Talk*/) {
+            if (interactableClose) {
+				if (dlgVisibility) {	DialogueButtonToggle(false); }// yes
+				else { DialogueButtonToggle(true); }
+			}
+			DialogueButtonToggle(false);
+		}// yes
+	}	
+	
 	void SetFocus()
 	{
 			//switches focus between UI and Character

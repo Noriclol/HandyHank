@@ -8,6 +8,8 @@ public class DialogueObject : ScriptableObject
 {
     public string dialogueName;
     public int dialogueSize;
+    public int currentPage = 0;
+    public bool finished =false;
     [SerializeField]
     public List<string> DialogueString = new List<string>();
     [SerializeField]

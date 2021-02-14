@@ -8,15 +8,34 @@ public class DialogueSysHandler : MonoBehaviour
     public GameObject DialoguePanel;
     PlayerController pc;
     public bool finished;
-    public int page = 0, maxPage;
+    public int page = 0, maxPage = 0;
     // Start is called before the first frame update
     void Start()
     {
         pc = player.GetComponent<PlayerController>();
-        maxPage = pc.closestInteractable.realContent.dialogueSize;
+        CollectInfo();
     }
+    public void CollectInfo() {
+        if (pc.closestInteractable = null) {
+            page = 0;
+            maxPage = 0;
+        }
+        else if (pc.closestInteractable != null) {
+            page = pc.closestInteractable.content.currentPage;
+            maxPage = pc.closestInteractable.content.dialogueSize;
+            finished = pc.closestInteractable.content.finished;
 
-    public void SetPageInfo(int i, string textRef, Sprite imgRef)
+        }
+    }
+    public void SetInfo() {
+        if (pc.closestInteractable != null)
+        {
+            pc.closestInteractable.content.currentPage = page;
+            pc.closestInteractable.content.dialogueSize = maxPage;
+            pc.closestInteractable.content.finished = finished;
+        }     
+    }
+    public void SetPageInfo(int i, string textRef, Sprite imgRef) // ON
     {
         Image image = DialoguePanel.GetComponentInChildren<Image>();
         Text text = DialoguePanel.GetComponentInChildren<Text>();
@@ -24,12 +43,9 @@ public class DialogueSysHandler : MonoBehaviour
         image.sprite = imgRef;
         text.text = textRef;
 
-        if (i >= maxPage) {
+        if (i == maxPage) {
             finished = true;
         }
-    }
-    public void SetPageInfo()
-    {
-        //empty
+        SetInfo();
     }
 }
