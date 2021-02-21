@@ -149,7 +149,7 @@ public class PlayerController : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.F)/*Talk*/) {
             if (interactableClose) {
 				if (dlgVisibility) {	DialogueButtonToggle(false); }// yes
-				else { DialogueButtonToggle(true); }
+				else { DialogueButtonToggle(true); } //no
 			}
 			DialogueButtonToggle(false);
 		}// yes
