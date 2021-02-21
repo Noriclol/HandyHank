@@ -816,7 +816,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -230.1, y: -0.00000095367}
+  m_AnchoredPosition: {x: -230.1, y: -0}
   m_SizeDelta: {x: 123.08066, y: 123.08066}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &169563608
@@ -895,8 +895,7 @@ MonoBehaviour:
   rb: {fileID: 179844507}
   animator: {fileID: 179844510}
   cam: {fileID: 837847281}
-  closestInteractable: {fileID: 0}
-  ownInteractable: {fileID: 0}
+  ci: {fileID: 0}
   InventoryPanel: {fileID: 307584694}
   MessagePanel: {fileID: 1861650750}
   DialoguePanel: {fileID: 1034128429}
@@ -1046,8 +1045,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c858253553d28149a58e42807dd8c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  ICollider: {fileID: 179844511}
   content: {fileID: 0}
 --- !u!1 &196266010
 GameObject:
@@ -1361,9 +1358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c858253553d28149a58e42807dd8c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 179844505}
-  ICollider: {fileID: 530206671}
-  content: {fileID: 0}
+  content: {fileID: 11400000, guid: f325b297c0708a441b8aa5ebdba9deab, type: 2}
 --- !u!58 &530206671
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -13042,7 +13037,6 @@ GameObject:
   - component: {fileID: 1034128430}
   - component: {fileID: 1034128432}
   - component: {fileID: 1034128431}
-  - component: {fileID: 1034128433}
   m_Layer: 0
   m_Name: DialogeSys
   m_TagString: Untagged
@@ -13109,23 +13103,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1034128429}
   m_CullTransparentMesh: 0
---- !u!114 &1034128433
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1034128429}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26acf821dae9c534f861524ef5696a0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 179844505}
-  DialoguePanel: {fileID: 1034128429}
-  finished: 0
-  page: 0
-  maxPage: 0
 --- !u!1 &1077353612
 GameObject:
   m_ObjectHideFlags: 0
@@ -17811,7 +17788,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 71.218, y: 0.0000021458}
+  m_AnchoredPosition: {x: 71.218, y: 0}
   m_SizeDelta: {x: 458.12427, y: 125.70253}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1727713103
@@ -17945,6 +17922,7 @@ GameObject:
   - component: {fileID: 1875917217}
   - component: {fileID: 1875917216}
   - component: {fileID: 1875917215}
+  - component: {fileID: 1875917218}
   m_Layer: 0
   m_Name: PlayerCanvas
   m_TagString: Untagged
@@ -18036,6 +18014,26 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1875917218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875917213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26acf821dae9c534f861524ef5696a0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprt: {fileID: 21300000, guid: 506caeb7037222745a35873dbfe9cc68, type: 3}
+  testText: How is Joe?
+  player: {fileID: 179844505}
+  DialoguePanel: {fileID: 1034128429}
+  image: {fileID: 169563606}
+  text: {fileID: 1727713101}
+  page: 0
+  maxPage: 0
 --- !u!1 &1998066790
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,8 +14,8 @@ public class PlayerController : MonoBehaviour
 
 	//Interactables
 	bool interactableClose = false;
-	public Interactable closestInteractable;
-	public DialogueObject ownInteractable; //made 
+	public Interactable ci;
+	//public DialogueObject ownInteractable; //made 
 	//UI
 	public GameObject InventoryPanel;
 	public GameObject MessagePanel;
@@ -44,21 +44,20 @@ public class PlayerController : MonoBehaviour
 	private void Start()
 	{
 		dialogueHandler = DialoguePanel.GetComponent<DialogueSysHandler>();
-		ownInteractable = GetComponent<DialogueObject>();
+		//ownInteractable = GetComponent<DialogueObject>();
 	}
 	//Collision
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
 		interactableClose = true;
-		closestInteractable = collision.GetComponent<Interactable>();
-		dialogueHandler.CollectInfo();
-		//Debug.Log(closestInteractable.content);
+		ci = collision.GetComponent<Interactable>();
+		
 	}
 	private void OnTriggerExit2D(Collider2D collision)
 	{
 		interactableClose = false;
-		//hanks thoughts implement route.
-		closestInteractable.content = ownInteractable;
+		//closestInteractable.content = ownInteractable;
+
 	}
 	//%%Collision%%
 	void MovementListener()
@@ -79,39 +78,7 @@ public class PlayerController : MonoBehaviour
 		}
 		cam.orthographicSize = cam.orthographicSize + scroll * 1.0f;
 	}
-	void DialogueButtonToggle(bool openClose) {  // main dialogue function
 
-		
-		if (openClose) //if open
-		{
-			DialoguePanel.gameObject.SetActive(false);
-			dlgVisibility = false;
-			int page, size = dialogueHandler.maxPage;
-			string text;
-			Sprite img = GetComponent<SpriteRenderer>().sprite;
-			page = dialogueHandler.page;
-			text = closestInteractable.content.DialogueString[page];
-			img = closestInteractable.content.DialogueImages[page];
-			if(/*new dialogue*/closestInteractable.content.finished) { // if dlg Finished?
-				DialoguePanel.gameObject.SetActive(true);
-				dlgVisibility = true;
-			}
-			else if(closestInteractable.content.currentPage > closestInteractable.content.dialogueSize){ // if dlg currentpage
-				dialogueHandler.SetPageInfo(page, text, img);
-				dialogueHandler.page += 1;
-				if (dialogueHandler.page == dialogueHandler.maxPage)
-				{
-					dialogueHandler.finished = true;
-				}
-			}
-			dialogueHandler.SetInfo();
-		}
-        else
-        {
-			DialoguePanel.gameObject.SetActive(true);
-			dlgVisibility = true;
-		}
-	}
 	void KeyListener() // keylistener func, can probably be done better.
 	{
 		if (Input.GetKeyDown(KeyCode.I)/*Inventory*/)
@@ -148,8 +115,8 @@ public class PlayerController : MonoBehaviour
 			}
 		if (Input.GetKeyDown(KeyCode.F)/*Talk*/) {
             if (interactableClose) {
-				if (dlgVisibility) {	DialogueButtonToggle(false); }// yes
-				else { DialogueButtonToggle(true); } //no
+				if (dlgVisibility) {	DialogueButtonToggle(false); }// turn off
+				else { DialogueButtonToggle(true); } //turn on
 			}
 			DialogueButtonToggle(false);
 		}// yes
