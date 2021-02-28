@@ -17,22 +17,17 @@ public class PlayerController : MonoBehaviour
 	public Interactable ci;
 	//public DialogueObject ownInteractable; //made 
 	//UI
-	public GameObject InventoryPanel;
-	public GameObject MessagePanel;
-	public GameObject DialoguePanel;
+	public GameObject GameUI;
+	GameObject InventoryPanel, MessagePanel;
 
 	bool invVisibility = false;
 	bool msgVisibility = false;
 	bool dlgVisibility = false;
 
-	bool dlgAvalable = false, dlgClicked = false;
-
-	
-
 	DialogueSysHandler dialogueHandler;
 
-	void Update()
-	{
+
+	void Update() {
 		animator.SetFloat("Horizontal", movement.x);
 		animator.SetFloat("Vertical", movement.y);
 		animator.SetFloat("Speed", movement.sqrMagnitude);
@@ -40,10 +35,14 @@ public class PlayerController : MonoBehaviour
 		KeyListener();
 		CameraInputListener();
 	}
-	private void FixedUpdate() { rb.MovePosition(rb.position + movement * playerSpeed * Time.fixedDeltaTime); }
+	private void FixedUpdate() { 
+		rb.MovePosition(rb.position + movement * playerSpeed * Time.fixedDeltaTime); 
+	}
 	private void Start()
 	{
-		dialogueHandler = DialoguePanel.GetComponent<DialogueSysHandler>();
+		dialogueHandler = GameUI.GetComponent<DialogueSysHandler>();
+		InventoryPanel = GameUI.transform.Find("InventorySys").gameObject;
+		MessagePanel = GameUI.transform.Find("MessageSys").gameObject;
 		//ownInteractable = GetComponent<DialogueObject>();
 	}
 	//Collision
@@ -51,12 +50,17 @@ public class PlayerController : MonoBehaviour
 	{
 		interactableClose = true;
 		ci = collision.GetComponent<Interactable>();
-		
+		dialogueHandler.maxPage = ci.content.DialogueText.Count;
+		dialogueHandler.page = 0;
+		Debug.Log("maxpage = " + dialogueHandler.maxPage);
+
 	}
 	private void OnTriggerExit2D(Collider2D collision)
 	{
 		interactableClose = false;
-		//closestInteractable.content = ownInteractable;
+		dlgVisibility = false;
+		dialogueHandler.ToggleWindowVisibility(false);
+		dialogueHandler.ClearPageInfo();
 
 	}
 	//%%Collision%%
@@ -83,43 +87,60 @@ public class PlayerController : MonoBehaviour
 	{
 		if (Input.GetKeyDown(KeyCode.I)/*Inventory*/)
 		{
-				Debug.Log("Input.Inventory: " + invVisibility);
 				if (invVisibility)//is active?
 				{ // set to true
 					InventoryPanel.gameObject.SetActive(false);
 					invVisibility = false;
-					Debug.Log("setting to: " + invVisibility);
 				}
 				else
 				{ // set to false	
 					InventoryPanel.gameObject.SetActive(true);
 					invVisibility = true;
-					Debug.Log("setting to: " + invVisibility);
 				}
 			}
 		if (Input.GetKeyDown(KeyCode.M)/*messagetab*/)
 		{
-				Debug.Log("Input.Message: " + msgVisibility);
 				if (msgVisibility)//is active?
 				{
 					MessagePanel.gameObject.SetActive(false);
 					msgVisibility = false;
-					Debug.Log("setting to: " + msgVisibility);
 				}// yes
 				else
 				{
 					MessagePanel.gameObject.SetActive(true);
 					msgVisibility = true;
-					Debug.Log("setting to: " + msgVisibility);
 				} // no	
 			}
 		if (Input.GetKeyDown(KeyCode.F)/*Talk*/) {
+
             if (interactableClose) {
-				if (dlgVisibility) {	DialogueButtonToggle(false); }// turn off
-				else { DialogueButtonToggle(true); } //turn on
+				if (dlgVisibility) {
+					dialogueHandler.ToggleWindowVisibility(false);
+					dlgVisibility = false;
+				}
+				else {
+					dialogueHandler.ToggleWindowVisibility(true);
+					dlgVisibility = true;
+				}
 			}
-			DialogueButtonToggle(false);
-		}// yes
+		}
+        if (Input.GetKeyDown(KeyCode.Return)/*Talk/Next Page*/) {
+			if (interactableClose) {
+                if (dlgVisibility) //window open
+                {
+					if (dialogueHandler.page >= dialogueHandler.maxPage - 1)
+					{
+						dialogueHandler.page = 0;
+						dialogueHandler.ToggleWindowVisibility(false);
+						dlgVisibility = false;
+					}
+					else
+					{
+						dialogueHandler.NextPage();
+					}
+				}
+            }
+        }
 	}	
 	
 	void SetFocus()

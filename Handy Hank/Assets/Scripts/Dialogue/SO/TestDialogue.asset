@@ -15,9 +15,9 @@ MonoBehaviour:
   dialogueName: joe
   currentPage: 0
   finished: 0
-  DialogueString:
-  - joe
-  - mama
+  DialogueText:
+  - Joe
+  - Mama!
   DialogueImages:
   - {fileID: 21300046, guid: 5c4f1fa01d076b0448a9438531d30a91, type: 3}
   - {fileID: 21300050, guid: 5c4f1fa01d076b0448a9438531d30a91, type: 3}
