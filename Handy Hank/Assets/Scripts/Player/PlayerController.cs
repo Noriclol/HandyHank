@@ -10,7 +10,8 @@ public class PlayerController : MonoBehaviour
 	public Animator animator;
 	public Camera cam;
 
-
+	//Gameplay
+	public Inventory inventory;
 
 	//Interactables
 	bool interactableClose = false;
@@ -25,6 +26,7 @@ public class PlayerController : MonoBehaviour
 	bool dlgVisibility = false;
 
 	DialogueSysHandler dialogueHandler;
+	InventorySysHandler inventoryHandler;
 
 
 	void Update() {
@@ -41,6 +43,7 @@ public class PlayerController : MonoBehaviour
 	private void Start()
 	{
 		dialogueHandler = GameUI.GetComponent<DialogueSysHandler>();
+		inventoryHandler = GameUI.GetComponent<InventorySysHandler>(); 
 		InventoryPanel = GameUI.transform.Find("InventorySys").gameObject;
 		MessagePanel = GameUI.transform.Find("MessageSys").gameObject;
 		//ownInteractable = GetComponent<DialogueObject>();
