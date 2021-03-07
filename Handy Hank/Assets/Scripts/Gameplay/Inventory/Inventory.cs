@@ -9,26 +9,30 @@ public class Inventory : MonoBehaviour
     private void Awake()
     {
         inventory = new InventorySlot[invSize];
+        for (int i = 0; i < invSize; i++)
+        {
+            inventory[i] = new InventorySlot();
+        }
     }
     void AddAmountatIndex(ItemSO item, int amount, int index) {
         inventory[index].item = item;
         inventory[index].amount = amount;
         Debug.Log("added " + amount + " of " + item + " at " + index);
     }
-    void RemoveAmountatIndex(int index, int amount) {
+    bool RemoveAmountatIndex(int index, int amount) {
         if (inventory[index].amount <= amount)
         {
             Debug.Log("removed all " + inventory[index].item + "s at " + index);
             inventory[index].item = null;
             inventory[index].amount = 0;
-            
+            return true;
         }
         else
         {
             Debug.Log("removed" + amount + " of " + inventory[index].item + " at " + index);
             inventory[index].amount = inventory[index].amount - amount;
+            return false;
         }
-        
     }
     int FindIndexofItem(ItemSO item) {
         for (int i = 0; i < invSize - 1; i++) {
@@ -61,7 +65,8 @@ public class Inventory : MonoBehaviour
         int emptySlot = FindEmptySlot();
         if (foundIndex <= invSize) { //look for empty item 
             //if item exists add amount to existing item pool
-            AddAmountatIndex(item, amount, foundIndex);
+            int newAmount = inventory[foundIndex].amount + amount;
+            AddAmountatIndex(item, newAmount, foundIndex);
             return true;
         }
         else if(emptySlot <= invSize)// look for empty slot
@@ -76,6 +81,12 @@ public class Inventory : MonoBehaviour
         }
         return false;
     }
+
+    public bool RemoveItemsfromInventory(ItemSO item, int amount)
+    {
+        return RemoveAmountatIndex(FindIndexofItem(item), amount);
+        //if true give reciever items and amount.
+    }
 }
 public class InventorySlot
 {
@@ -86,6 +97,11 @@ public class InventorySlot
         this.item = item;
         this.amount = amount;
 	}
+    public InventorySlot() {
+        this.item = null;
+        this.amount = 0;
+    
+    }
 }
 
 

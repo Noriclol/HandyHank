@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
 
 	//Interactables
 	bool interactableClose = false;
-	public Interactable ci;
+	public Interactable ci; //Closest Interactable
 	//public DialogueObject ownInteractable; //made 
 	//UI
 	public GameObject GameUI;
@@ -51,20 +51,39 @@ public class PlayerController : MonoBehaviour
 	//Collision
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		interactableClose = true;
-		ci = collision.GetComponent<Interactable>();
-		dialogueHandler.maxPage = ci.content.DialogueText.Count;
-		dialogueHandler.page = 0;
-		Debug.Log("maxpage = " + dialogueHandler.maxPage);
+        if (collision.tag == "ItemPickup") {
+			Debug.Log("oink oink");
+			collision.GetComponent<ItemPickup>().OnPickup();
+		}
+		else if(collision.tag == "Interactable") {
+			interactableClose = true;
+			ci = collision.GetComponent<Interactable>();
+			dialogueHandler.maxPage = ci.content.DialogueText.Count;
+			dialogueHandler.page = 0;
+			Debug.Log("maxpage = " + dialogueHandler.maxPage);
+		}
+        else {
+			Debug.LogError("No recognized tag");
+        }
+        
+		
 
 	}
 	private void OnTriggerExit2D(Collider2D collision)
 	{
-		interactableClose = false;
-		dlgVisibility = false;
-		dialogueHandler.ToggleWindowVisibility(false);
-		dialogueHandler.ClearPageInfo();
 
+		if (collision.tag == "ItemPickup") {
+			Debug.Log("oink");
+		}
+		else if (collision.tag == "Interactable") {
+			interactableClose = false;
+			dlgVisibility = false;
+			dialogueHandler.ToggleWindowVisibility(false);
+			dialogueHandler.ClearPageInfo();
+		}
+		else {
+			Debug.LogError("No recognized tag");
+		}
 	}
 	//%%Collision%%
 	void MovementListener()
@@ -99,6 +118,7 @@ public class PlayerController : MonoBehaviour
 				{ // set to false	
 					InventoryPanel.gameObject.SetActive(true);
 					invVisibility = true;
+					inventoryHandler.Populate();
 				}
 			}
 		if (Input.GetKeyDown(KeyCode.M)/*messagetab*/)

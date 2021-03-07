@@ -9,17 +9,29 @@ public class InventorySysHandler : MonoBehaviour
     public GameObject InventoryPanel;
     public GameObject InventorySlotContainer;
     public GameObject InventorySlot;
-
-    
+    public ItemSO item;
+    public int amount = 1;
+    Inventory pi;
+    List<GameObject> SlotArray;
 
     private void Start()
     {
-        player.GetComponent<Inventory>();
+        pi = player.GetComponent<Inventory>();
+        SlotArray = new List<GameObject>();
     }
     public void Populate() {
-
-        //for (int i = 0; i < player.inventory; i++)
-
+        foreach(Transform child in InventorySlotContainer.transform) {
+            GameObject.Destroy(child.gameObject);
+        }
+        SlotArray.Clear();
+        for (int i = 0; i < pi.invSize; i++) {
+            //Debug.Log(pi.inventory[i].amount);
+            GameObject newSlot = Instantiate(InventorySlot, InventorySlotContainer.transform);
+            SlotArray.Add(newSlot);
+            if (pi.inventory[i].amount > 0){
+                newSlot.GetComponent<SlotButtonHandler>().PopulateSlot(pi.inventory[i].item, pi.inventory[i].amount);
+            }
+            //newSlot.GetComponent<SlotButtonHandler>().PopulateSlot(item, amount);
+        }
     }
-
 }
