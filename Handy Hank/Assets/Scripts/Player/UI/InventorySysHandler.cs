@@ -34,4 +34,8 @@ public class InventorySysHandler : MonoBehaviour
             //newSlot.GetComponent<SlotButtonHandler>().PopulateSlot(item, amount);
         }
     }
+    public void Close()
+	{
+        InventoryPanel.SetActive(false);
+	}
 }

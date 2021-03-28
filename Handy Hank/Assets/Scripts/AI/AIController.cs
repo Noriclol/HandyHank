@@ -13,8 +13,8 @@ public class AIController : MonoBehaviour
 
 	private void Update()
 	{
-		movement.x = Input.GetAxisRaw("Horizontal");
-		movement.y = Input.GetAxisRaw("Vertical");
+		//movement.x = Input.GetAxisRaw("Horizontal");
+		//movement.y = Input.GetAxisRaw("Vertical");
 
 		animator.SetFloat("Horizontal", movement.x);
 		animator.SetFloat("Vertical", movement.y);

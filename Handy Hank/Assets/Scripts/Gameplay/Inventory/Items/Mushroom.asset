@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Mushroom
   desc: a brown mushroom
-  icon: {fileID: 21300050, guid: 5c4f1fa01d076b0448a9438531d30a91, type: 3}
+  icon: {fileID: 21300000, guid: 8d54979160984b745a9bd59e8d1dff5a, type: 3}
   worth: 3
   usable: 1
   sellable: 1

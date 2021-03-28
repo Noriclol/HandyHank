@@ -25,8 +25,8 @@ public class PlayerController : MonoBehaviour
 	bool msgVisibility = false;
 	bool dlgVisibility = false;
 
-	DialogueSysHandler dialogueHandler;
-	InventorySysHandler inventoryHandler;
+	public DialogueSysHandler dialogueHandler;
+	public InventorySysHandler inventoryHandler;
 
 
 	void Update() {
@@ -52,15 +52,16 @@ public class PlayerController : MonoBehaviour
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
         if (collision.tag == "ItemPickup") {
-			Debug.Log("oink oink");
-			collision.GetComponent<ItemPickup>().OnPickup();
+			//Debug.Log("oink oink");
+			collision.GetComponent<ItemInstance>().player = gameObject;
+			collision.GetComponent<ItemInstance>().OnPickup();
 		}
 		else if(collision.tag == "Interactable") {
 			interactableClose = true;
 			ci = collision.GetComponent<Interactable>();
 			dialogueHandler.maxPage = ci.content.DialogueText.Count;
 			dialogueHandler.page = 0;
-			Debug.Log("maxpage = " + dialogueHandler.maxPage);
+			//Debug.Log("maxpage = " + dialogueHandler.maxPage);
 		}
         else {
 			Debug.LogError("No recognized tag");
