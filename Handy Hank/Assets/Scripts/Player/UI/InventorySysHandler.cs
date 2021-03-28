@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventorySysHandler : MonoBehaviour
 {
@@ -36,6 +37,7 @@ public class InventorySysHandler : MonoBehaviour
     }
     public void Close()
 	{
-        InventoryPanel.SetActive(false);
+        //InventoryPanel.SetActive(false);
+        InventoryPanel.GetComponent<Image>().enabled = false;
 	}
 }
