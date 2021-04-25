@@ -7,10 +7,12 @@ using UnityEngine.Tilemaps;
 
 public struct ChunkData
 {
+    public Vector2 Pos;
+
     public chunkBiome biome;
+    public Tile whiteboxChunk;
+    public List<Tile> tiles;
 
-
-    public List<Tile> structures;
 }
 
 public enum chunkBiome

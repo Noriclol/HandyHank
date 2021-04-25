@@ -11,6 +11,8 @@ public class Chunk : MonoBehaviour
     public Tilemap tilemap;
     int chunkSize = 16;
 
+
+
     void Start()
     {
         chunkPos = transform.position;
@@ -19,16 +21,18 @@ public class Chunk : MonoBehaviour
 
     void Update()
     {
-        
+
     }
     void Populate()
     {
         Vector3Int currentTile = tilemap.WorldToCell(chunkPos);
 
-        for (int y = 0; y < chunkSize; y++) {
-            for (int x = 0; x < chunkSize; x++) {
+        for (int y = 0; y < chunkSize; y++)
+        {
+            for (int x = 0; x < chunkSize; x++)
+            {
+                //tilemap.SetTile(new Vector3Int(x, y, 0), TileManager.instance.grass);
 
-                
 
             }
         }
@@ -36,4 +40,6 @@ public class Chunk : MonoBehaviour
 
 
     }
+    //void GetBorderChunks();
+    
 }

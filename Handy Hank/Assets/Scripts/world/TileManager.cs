@@ -10,6 +10,12 @@ public class TileManager : MonoBehaviour
     {
         instance = this;
     }
+
+    //whiteboxChunks
+    public Tile WB_grass;
+    public Tile WB_ocean;
+
+
     //tileRepository
     public Tile grass;
     public Tile sand;
