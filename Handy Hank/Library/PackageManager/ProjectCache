@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637525460192564414
-    m_Hash: 2493206812
+      ticks: 637549608414752234
+    m_Hash: 2212983278
   m_LockFileStatus:
     m_FilePath: C:/Users/GameDesign/Documents/Git Projects/Hank/HandyHank/Handy Hank/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637525460404092345
-    m_Hash: 2548674612
+      ticks: 637549608422151978
+    m_Hash: 4268244775
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -42,8 +42,60 @@ m_PackageAssets:
       errors: []
       versions:
         all:
+        - 1.0.15-preview.1
+        - 1.0.15-preview.2
+        - 1.0.15-preview.3
+        - 1.0.15-preview.4
+        - 1.0.15-preview.5
+        - 1.0.16-preview
+        - 1.0.16-preview.1
+        - 1.0.16-preview.2
+        - 2.0.0-preview.1
+        - 2.0.0-preview.2
+        - 2.0.0-preview.3
+        - 2.1.0-preview.1
+        - 2.1.0-preview.2
+        - 2.1.0-preview.4
+        - 2.1.0-preview.5
+        - 2.1.0-preview.7
+        - 2.2.0-preview.1
+        - 2.2.0-preview.4
+        - 2.2.0-preview.5
+        - 2.2.1-preview.1
+        - 2.2.1-preview.2
+        - 3.0.2
+        - 3.0.3
+        - 3.0.4
+        - 3.0.5
+        - 3.0.6
+        - 3.0.8
+        - 3.1.0
+        - 3.1.1
+        - 3.2.1
+        - 3.2.2
+        - 3.2.3
+        - 3.2.4
+        - 3.2.5
+        - 3.2.6
+        - 4.0.0
+        - 4.0.1
+        - 4.1.0
+        - 4.1.1
+        - 4.2.1
+        - 4.2.2
+        - 4.2.3
+        - 4.2.4
+        - 4.2.5
+        - 4.2.6
+        - 4.2.8
+        - 5.0.0
+        - 5.0.1
         - 5.0.2
+        - 5.0.3
         - 5.0.4
+        - 6.0.0-pre.1
+        - 6.0.0-pre.2
+        - 6.0.1
         compatible:
         - 5.0.4
         verified: 5.0.4
@@ -92,7 +144,7 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637478931180000000
       documentationUrl: 
       hasRepository: 1
       repository:
@@ -115,7 +167,7 @@ m_PackageAssets:
         email: 
         url: 
       category: 
-      type: tool
+      type: 
       description: 'The 2D Pixel Perfect package contains the Pixel Perfect Camera
         component which ensures your pixel art remains crisp and clear at different
         resolutions, and stable in motion.
@@ -131,7 +183,20 @@ m_PackageAssets:
       errors: []
       versions:
         all:
+        - 1.0.0-preview
+        - 1.0.1-preview
+        - 2.0.2
+        - 2.0.3
+        - 2.0.4
+        - 2.1.0
+        - 3.0.0
+        - 3.0.1
+        - 3.0.2
+        - 4.0.0
         - 4.0.1
+        - 5.0.0-pre.1
+        - 5.0.0-pre.2
+        - 5.0.0
         compatible:
         - 4.0.1
         verified: 4.0.1
@@ -154,7 +219,7 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637328350910000000
       documentationUrl: 
       hasRepository: 1
       repository:
@@ -186,7 +251,38 @@ m_PackageAssets:
       errors: []
       versions:
         all:
+        - 1.0.0-preview.1
+        - 1.0.0-preview.2
+        - 1.0.0-preview.3
+        - 1.0.0-preview.4
+        - 1.1.0-preview.1
+        - 1.1.0-preview.3
+        - 1.2.0-preview.1
+        - 1.2.0-preview.3
+        - 1.2.0-preview.4
+        - 2.0.2
+        - 2.0.3
+        - 2.0.4
+        - 2.0.5
+        - 2.0.7
+        - 2.1.0
+        - 2.1.3
+        - 2.1.4
+        - 2.1.5
+        - 2.1.6
+        - 3.0.0
+        - 3.1.1
+        - 3.1.3
+        - 3.1.4
+        - 3.1.5
+        - 3.1.6
+        - 3.1.7
+        - 4.0.0
+        - 4.0.1
         - 4.0.2
+        - 5.0.0-pre.1
+        - 5.0.0-pre.2
+        - 5.0.1
         compatible:
         - 4.0.2
         verified: 4.0.2
@@ -234,7 +330,7 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637366443480000000
       documentationUrl: 
       hasRepository: 1
       repository:
@@ -317,7 +413,53 @@ m_PackageAssets:
       errors: []
       versions:
         all:
+        - 1.0.10-preview.2
+        - 1.0.11-preview
+        - 1.0.12-preview
+        - 1.0.12-preview.1
+        - 1.0.14-preview.2
+        - 2.0.0-preview.4
+        - 2.0.0-preview.5
+        - 2.0.0-preview.7
+        - 2.0.0-preview.8
+        - 2.0.0-preview.9
+        - 2.1.0-preview.2
+        - 2.1.0-preview.6
+        - 2.1.0-preview.7
+        - 2.1.0-preview.10
+        - 2.1.0-preview.11
+        - 3.0.1
+        - 3.0.2
+        - 3.0.4
+        - 3.0.5
+        - 3.0.6
+        - 3.0.7
+        - 3.0.8
+        - 3.0.9
+        - 3.0.10
+        - 3.0.11
+        - 3.0.12
+        - 3.0.13
+        - 3.0.14
+        - 3.0.15
+        - 4.0.0
+        - 4.0.1
+        - 4.0.2
+        - 4.0.3
+        - 4.1.0
+        - 4.1.1
+        - 4.1.2
+        - 4.1.3
+        - 4.1.4
+        - 4.1.5
+        - 5.0.0
+        - 5.0.1
+        - 5.0.2
+        - 5.1.0
         - 5.1.1
+        - 6.0.0-pre.1
+        - 6.0.0-pre.2
+        - 6.0.0
         compatible:
         - 5.1.1
         verified: 5.1.1
@@ -370,7 +512,7 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637478930260000000
       documentationUrl: 
       hasRepository: 1
       repository:
@@ -451,9 +593,45 @@ m_PackageAssets:
       errors: []
       versions:
         all:
+        - 1.2.3-preview
+        - 1.2.4-preview
+        - 1.2.6
+        - 1.2.7
+        - 1.2.9
+        - 1.2.11
+        - 1.2.15
+        - 1.2.16
+        - 1.2.17-preview.3
+        - 1.3.2
+        - 1.3.3
+        - 1.3.4
+        - 1.3.5
+        - 1.3.6
+        - 1.3.7
+        - 1.3.8
         - 1.3.9
+        - 2.0.0-preview.6
+        - 2.0.0-preview.8
+        - 2.0.0-preview.15
+        - 2.0.0-preview.17
+        - 2.0.0-preview.20
+        - 2.0.0-preview.21
+        - 2.0.0-preview.22
+        - 2.1.0-preview.3
+        - 2.1.0-preview.5
+        - 2.1.0-preview.6
         compatible:
         - 1.3.9
+        - 2.0.0-preview.6
+        - 2.0.0-preview.8
+        - 2.0.0-preview.15
+        - 2.0.0-preview.17
+        - 2.0.0-preview.20
+        - 2.0.0-preview.21
+        - 2.0.0-preview.22
+        - 2.1.0-preview.3
+        - 2.1.0-preview.5
+        - 2.1.0-preview.6
         verified: 1.3.9
       dependencies: []
       resolvedDependencies: []
@@ -480,7 +658,7 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637314349270000000
       documentationUrl: 
       hasRepository: 1
       repository:
@@ -511,9 +689,55 @@ m_PackageAssets:
       errors: []
       versions:
         all:
+        - 1.0.2
+        - 1.0.6
+        - 1.0.8
+        - 1.1.0
+        - 1.1.1
+        - 1.1.2-preview
+        - 1.1.2-preview.2
+        - 1.1.3-preview.1
+        - 1.1.4-preview
+        - 1.1.4
+        - 1.2.0-preview
+        - 1.2.1
+        - 2.0.0-preview
+        - 2.0.1
+        - 2.0.2
+        - 2.0.3
+        - 2.0.5
         - 2.0.7
+        - 3.0.1
+        - 3.0.2
+        - 3.0.3
+        - 3.0.4
+        - 3.0.5
+        - 3.0.6
         compatible:
+        - 1.0.2
+        - 1.0.6
+        - 1.0.8
+        - 1.1.0
+        - 1.1.1
+        - 1.1.2-preview
+        - 1.1.2-preview.2
+        - 1.1.3-preview.1
+        - 1.1.4-preview
+        - 1.1.4
+        - 1.2.0-preview
+        - 1.2.1
+        - 2.0.0-preview
+        - 2.0.1
+        - 2.0.2
+        - 2.0.3
+        - 2.0.5
         - 2.0.7
+        - 3.0.1
+        - 3.0.2
+        - 3.0.3
+        - 3.0.4
+        - 3.0.5
+        - 3.0.6
         verified: 2.0.7
       dependencies:
       - name: com.unity.test-framework
@@ -540,7 +764,7 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637334461080000000
       documentationUrl: 
       hasRepository: 1
       repository:
@@ -571,8 +795,30 @@ m_PackageAssets:
       errors: []
       versions:
         all:
+        - 1.0.2
+        - 1.0.3
+        - 1.0.4
+        - 1.0.9
+        - 1.0.10
+        - 1.0.11
+        - 2.0.0
+        - 2.0.1
+        - 2.0.2
+        - 2.0.3
+        - 2.0.5
         - 2.0.7
         compatible:
+        - 1.0.2
+        - 1.0.3
+        - 1.0.4
+        - 1.0.9
+        - 1.0.10
+        - 1.0.11
+        - 2.0.0
+        - 2.0.1
+        - 2.0.2
+        - 2.0.3
+        - 2.0.5
         - 2.0.7
         verified: 2.0.7
       dependencies:
@@ -600,7 +846,7 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637486638490000000
       documentationUrl: 
       hasRepository: 1
       repository:
@@ -631,8 +877,28 @@ m_PackageAssets:
       errors: []
       versions:
         all:
+        - 1.0.2
+        - 1.0.3
+        - 1.0.7
+        - 1.1.0
+        - 1.1.2
+        - 1.1.3
+        - 1.1.4
+        - 1.2.0
+        - 1.2.1
+        - 1.2.2
         - 1.2.3
         compatible:
+        - 1.0.2
+        - 1.0.3
+        - 1.0.7
+        - 1.1.0
+        - 1.1.2
+        - 1.1.3
+        - 1.1.4
+        - 1.2.0
+        - 1.2.1
+        - 1.2.2
         - 1.2.3
         verified: 1.2.3
       dependencies: []
@@ -650,13 +916,124 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637394922300000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.vscode.git
-        revision: 547f63839bdc87e0aed2c9e0d84f8f6336a83ea3
+        revision: b5ec9b38109e52b1b26597d521e4df75e042ebb9
+        path: 
+    - packageId: com.unity.render-pipelines.universal@10.3.2
+      testable: 0
+      isDirectDependency: 1
+      version: 10.3.2
+      source: 1
+      resolvedPath: C:\Users\GameDesign\Documents\Git Projects\Hank\HandyHank\Handy
+        Hank\Library\PackageCache\com.unity.render-pipelines.universal@10.3.2
+      assetPath: Packages/com.unity.render-pipelines.universal
+      name: com.unity.render-pipelines.universal
+      displayName: Universal RP
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: The Universal Render Pipeline (URP) is a prebuilt Scriptable Render
+        Pipeline, made by Unity. URP provides artist-friendly workflows that let
+        you quickly and easily create optimized graphics across a range of platforms,
+        from mobile to high-end consoles and PCs.
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 7.0.0
+        - 7.0.1
+        - 7.1.1
+        - 7.1.2
+        - 7.1.5
+        - 7.1.6
+        - 7.1.7
+        - 7.1.8
+        - 7.2.0
+        - 7.2.1
+        - 7.3.1
+        - 7.4.1
+        - 7.4.2
+        - 7.4.3
+        - 7.5.1
+        - 7.5.2
+        - 7.5.3
+        - 7.6.0
+        - 8.0.1
+        - 8.1.0
+        - 8.2.0
+        - 8.3.1
+        - 9.0.0-preview.14
+        - 9.0.0-preview.35
+        - 9.0.0-preview.55
+        - 9.0.0-preview.72
+        - 10.0.0-preview.26
+        - 10.1.0
+        - 10.2.0
+        - 10.2.1
+        - 10.2.2
+        - 10.3.1
+        - 10.3.2
+        - 10.4.0
+        compatible:
+        - 10.3.2
+        - 10.4.0
+        verified: 10.3.2
+      dependencies:
+      - name: com.unity.mathematics
+        version: 1.1.0
+      - name: com.unity.render-pipelines.core
+        version: 10.3.2
+      - name: com.unity.shadergraph
+        version: 10.3.2
+      resolvedDependencies:
+      - name: com.unity.mathematics
+        version: 1.1.0
+      - name: com.unity.render-pipelines.core
+        version: 10.3.2
+      - name: com.unity.ugui
+        version: 1.0.0
+      - name: com.unity.modules.ui
+        version: 1.0.0
+      - name: com.unity.modules.imgui
+        version: 1.0.0
+      - name: com.unity.shadergraph
+        version: 10.3.2
+      - name: com.unity.searcher
+        version: 4.3.1
+      keywords:
+      - graphics
+      - performance
+      - rendering
+      - mobile
+      - render
+      - pipeline
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637502286510000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: git+https://github.com/Unity-Technologies/Graphics.git
+        revision: 1342255ea41f4ab7910113c8dc207aecdfd4cf8e
         path: 
     - packageId: com.unity.test-framework@1.1.22
       testable: 0
@@ -679,10 +1056,38 @@ m_PackageAssets:
       errors: []
       versions:
         all:
+        - 0.0.4-preview
+        - 0.0.29-preview
+        - 1.0.0
+        - 1.0.7
+        - 1.0.9
+        - 1.0.11
+        - 1.0.12
+        - 1.0.13
+        - 1.0.14
+        - 1.0.16
+        - 1.0.17
+        - 1.0.18
+        - 1.1.0
+        - 1.1.1
+        - 1.1.2
+        - 1.1.3
+        - 1.1.5
+        - 1.1.8
+        - 1.1.9
+        - 1.1.11
+        - 1.1.13
+        - 1.1.14
+        - 1.1.16
+        - 1.1.18
+        - 1.1.19
+        - 1.1.20
         - 1.1.22
+        - 1.1.24
         compatible:
         - 1.1.22
-        verified: 1.1.22
+        - 1.1.24
+        verified: 1.1.24
       dependencies:
       - name: com.unity.ext.nunit
         version: 1.0.6
@@ -712,12 +1117,12 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637469345300000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
-        url: https://github.com/Unity-Technologies/com.unity.test-framework.git
+        url: git+https://github.com/Unity-Technologies/com.unity.test-framework.git
         revision: 56c667cbc326a1cbab8dfd7ebc693a1121d0abe1
         path: 
     - packageId: com.unity.textmeshpro@3.0.1
@@ -761,10 +1166,89 @@ m_PackageAssets:
       errors: []
       versions:
         all:
+        - 0.1.2
+        - 1.0.21
+        - 1.0.23
+        - 1.0.25
+        - 1.0.26
+        - 1.1.0
+        - 1.2.0
+        - 1.2.1
+        - 1.2.2
+        - 1.2.3
+        - 1.2.4
+        - 1.3.0-preview
+        - 1.3.0
+        - 1.4.0-preview.1b
+        - 1.4.0-preview.2a
+        - 1.4.0-preview.3a
+        - 1.4.0
+        - 1.4.1-preview.1
+        - 1.4.1
+        - 1.5.0-preview.1
+        - 1.5.0-preview.2
+        - 1.5.0-preview.3
+        - 1.5.0-preview.4
+        - 1.5.0-preview.5
+        - 1.5.0-preview.6
+        - 1.5.0-preview.7
+        - 1.5.0-preview.8
+        - 1.5.0-preview.10
+        - 1.5.0-preview.11
+        - 1.5.0-preview.12
+        - 1.5.0-preview.13
+        - 1.5.0-preview.14
+        - 1.5.0
+        - 1.5.1
+        - 1.5.3
+        - 1.5.4
+        - 1.5.5
+        - 1.5.6
+        - 2.0.0
+        - 2.0.1-preview.1
+        - 2.0.1
+        - 2.1.0-preview.1
+        - 2.1.0-preview.2
+        - 2.1.0-preview.3
+        - 2.1.0-preview.4
+        - 2.1.0-preview.5
+        - 2.1.0-preview.7
+        - 2.1.0-preview.8
+        - 2.1.0-preview.10
+        - 2.1.0-preview.11
+        - 2.1.0-preview.12
+        - 2.1.0-preview.13
+        - 2.1.0-preview.14
+        - 2.1.0
+        - 2.1.1
+        - 2.1.3
+        - 2.1.4
+        - 2.1.5
+        - 2.1.6
+        - 3.0.0-preview.1
+        - 3.0.0-preview.3
+        - 3.0.0-preview.4
+        - 3.0.0-preview.5
+        - 3.0.0-preview.7
+        - 3.0.0-preview.8
+        - 3.0.0-preview.10
+        - 3.0.0-preview.11
+        - 3.0.0-preview.12
+        - 3.0.0-preview.13
+        - 3.0.0-preview.14
+        - 3.0.0
         - 3.0.1
+        - 3.0.3
+        - 3.0.4
+        - 3.0.5
+        - 3.0.6
         compatible:
         - 3.0.1
-        verified: 3.0.1
+        - 3.0.3
+        - 3.0.4
+        - 3.0.5
+        - 3.0.6
+        verified: 3.0.6
       dependencies:
       - name: com.unity.ugui
         version: 1.0.0
@@ -793,7 +1277,7 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637314376320000000
       documentationUrl: 
       hasRepository: 1
       repository:
@@ -867,6 +1351,7 @@ m_PackageAssets:
         - 1.4.4
         - 1.4.5
         - 1.4.6
+        - 1.4.7
         - 1.5.0-pre.2
         - 1.5.0-preview.1
         - 1.5.0-preview.2
@@ -877,9 +1362,12 @@ m_PackageAssets:
         - 1.5.1-pre.2
         - 1.5.1-pre.3
         - 1.5.2
+        - 1.5.4
         - 1.6.0-pre.1
+        - 1.6.0-pre.3
         compatible:
         - 1.4.6
+        - 1.4.7
         - 1.5.0-pre.2
         - 1.5.0-preview.1
         - 1.5.0-preview.2
@@ -890,8 +1378,10 @@ m_PackageAssets:
         - 1.5.1-pre.2
         - 1.5.1-pre.3
         - 1.5.2
+        - 1.5.4
         - 1.6.0-pre.1
-        verified: 1.4.6
+        - 1.6.0-pre.3
+        verified: 1.4.7
       dependencies:
       - name: com.unity.modules.director
         version: 1.0.0
@@ -2763,8 +3253,18 @@ m_PackageAssets:
       errors: []
       versions:
         all:
+        - 0.1.5-preview
+        - 0.1.6-preview
+        - 0.1.9-preview
+        - 1.0.0
+        - 1.0.5
         - 1.0.6
         compatible:
+        - 0.1.5-preview
+        - 0.1.6-preview
+        - 0.1.9-preview
+        - 1.0.0
+        - 1.0.5
         - 1.0.6
         verified: 1.0.6
       dependencies: []
@@ -2785,7 +3285,7 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637429759280000000
       documentationUrl: 
       hasRepository: 1
       repository:
@@ -2815,9 +3315,33 @@ m_PackageAssets:
       errors: []
       versions:
         all:
+        - 0.0.12-preview.2
+        - 0.0.12-preview.5
+        - 0.0.12-preview.8
+        - 0.0.12-preview.10
+        - 0.0.12-preview.11
+        - 0.0.12-preview.13
+        - 0.0.12-preview.17
+        - 0.0.12-preview.19
+        - 0.0.12-preview.20
+        - 1.0.0-preview.1
+        - 1.0.1
+        - 1.1.0-preview.1
         - 1.1.0
         - 1.2.1
         compatible:
+        - 0.0.12-preview.2
+        - 0.0.12-preview.5
+        - 0.0.12-preview.8
+        - 0.0.12-preview.10
+        - 0.0.12-preview.11
+        - 0.0.12-preview.13
+        - 0.0.12-preview.17
+        - 0.0.12-preview.19
+        - 0.0.12-preview.20
+        - 1.0.0-preview.1
+        - 1.0.1
+        - 1.1.0-preview.1
         - 1.1.0
         - 1.2.1
         verified: 1.2.1
@@ -2837,13 +3361,314 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 636984649280000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: git@github.com:Unity-Technologies/Unity.Mathematics.git
         revision: 0a3dfafaf606098ea681de4c4be60f3aac63b773
+        path: 
+    - packageId: com.unity.render-pipelines.core@10.3.2
+      testable: 0
+      isDirectDependency: 0
+      version: 10.3.2
+      source: 1
+      resolvedPath: C:\Users\GameDesign\Documents\Git Projects\Hank\HandyHank\Handy
+        Hank\Library\PackageCache\com.unity.render-pipelines.core@10.3.2
+      assetPath: Packages/com.unity.render-pipelines.core
+      name: com.unity.render-pipelines.core
+      displayName: Core RP Library
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: SRP Core makes it easier to create or customize a Scriptable Render
+        Pipeline (SRP). SRP Core contains reusable code, including boilerplate code
+        for working with platform-specific graphics APIs, utility functions for common
+        rendering operations, and  shader libraries. The code in SRP Core is use
+        by the High Definition Render Pipeline (HDRP) and Universal Render Pipeline
+        (URP). If you are creating a custom SRP from scratch or customizing a prebuilt
+        SRP, using SRP Core will save you time.
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 0.1.21
+        - 0.1.27
+        - 0.1.28
+        - 1.0.0-beta
+        - 1.0.1-beta
+        - 1.1.1-preview
+        - 1.1.2-preview
+        - 1.1.4-preview
+        - 1.1.5-preview
+        - 1.1.8-preview
+        - 1.1.10-preview
+        - 1.1.11-preview
+        - 2.0.1-preview
+        - 2.0.3-preview
+        - 2.0.4-preview
+        - 2.0.4-preview.1
+        - 2.0.5-preview
+        - 2.0.6-preview
+        - 2.0.7-preview
+        - 2.0.8-preview
+        - 3.0.0-preview
+        - 3.1.0-preview
+        - 3.3.0-preview
+        - 4.0.0-preview
+        - 4.0.1-preview
+        - 4.1.0-preview
+        - 4.2.0-preview
+        - 4.3.0-preview
+        - 4.6.0-preview
+        - 4.8.0-preview
+        - 4.9.0-preview
+        - 4.10.0-preview
+        - 5.0.0-preview
+        - 5.1.0
+        - 5.2.0
+        - 5.2.1
+        - 5.2.2
+        - 5.2.3
+        - 5.3.1
+        - 5.6.1
+        - 5.7.2
+        - 5.8.2
+        - 5.9.0
+        - 5.10.0
+        - 5.13.0
+        - 5.16.1
+        - 6.5.2
+        - 6.5.3
+        - 6.7.1
+        - 6.9.0
+        - 6.9.1
+        - 6.9.2
+        - 7.0.0
+        - 7.0.1
+        - 7.1.1
+        - 7.1.2
+        - 7.1.5
+        - 7.1.6
+        - 7.1.7
+        - 7.1.8
+        - 7.2.0
+        - 7.2.1
+        - 7.3.1
+        - 7.4.1
+        - 7.4.2
+        - 7.4.3
+        - 7.5.1
+        - 7.5.2
+        - 7.5.3
+        - 7.6.0
+        - 8.0.1
+        - 8.1.0
+        - 8.2.0
+        - 8.3.1
+        - 9.0.0-preview.13
+        - 9.0.0-preview.35
+        - 9.0.0-preview.38
+        - 9.0.0-preview.60
+        - 9.0.0-preview.77
+        - 10.0.0-preview.30
+        - 10.1.0
+        - 10.2.0
+        - 10.2.1
+        - 10.2.2
+        - 10.3.1
+        - 10.3.2
+        - 10.4.0
+        compatible:
+        - 10.3.2
+        - 10.4.0
+        verified: 10.3.2
+      dependencies:
+      - name: com.unity.ugui
+        version: 1.0.0
+      resolvedDependencies:
+      - name: com.unity.ugui
+        version: 1.0.0
+      - name: com.unity.modules.ui
+        version: 1.0.0
+      - name: com.unity.modules.imgui
+        version: 1.0.0
+      keywords: []
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637502284870000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: git+https://github.com/Unity-Technologies/Graphics.git
+        revision: 1342255ea41f4ab7910113c8dc207aecdfd4cf8e
+        path: 
+    - packageId: com.unity.shadergraph@10.3.2
+      testable: 0
+      isDirectDependency: 0
+      version: 10.3.2
+      source: 1
+      resolvedPath: C:\Users\GameDesign\Documents\Git Projects\Hank\HandyHank\Handy
+        Hank\Library\PackageCache\com.unity.shadergraph@10.3.2
+      assetPath: Packages/com.unity.shadergraph
+      name: com.unity.shadergraph
+      displayName: Shader Graph
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: The Shader Graph package adds a visual Shader editing tool to
+        Unity. You can use this tool to create Shaders in a visual way instead of
+        writing code. Specific render pipelines can implement specific graph features.
+        Currently, both the High Definition Rendering Pipeline and the Universal
+        Rendering Pipeline support Shader Graph.
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 0.1.8
+        - 0.1.9
+        - 0.1.17
+        - 1.0.0-beta
+        - 1.1.1-preview
+        - 1.1.2-preview
+        - 1.1.3-preview
+        - 1.1.4-preview
+        - 1.1.5-preview
+        - 1.1.6-preview
+        - 1.1.8-preview
+        - 1.1.9-preview
+        - 2.0.1-preview
+        - 2.0.3-preview
+        - 2.0.4-preview
+        - 2.0.4-preview.1
+        - 2.0.5-preview
+        - 2.0.6-preview
+        - 2.0.7-preview
+        - 2.0.8-preview
+        - 3.0.0-preview
+        - 3.1.0-preview
+        - 3.3.0-preview
+        - 4.0.0-preview
+        - 4.0.1-preview
+        - 4.1.0-preview
+        - 4.2.0-preview
+        - 4.3.0-preview
+        - 4.6.0-preview
+        - 4.8.0-preview
+        - 4.9.0-preview
+        - 4.10.0-preview
+        - 5.0.0-preview
+        - 5.1.0
+        - 5.2.0
+        - 5.2.1
+        - 5.2.2
+        - 5.2.3
+        - 5.3.1
+        - 5.6.1
+        - 5.7.2
+        - 5.8.2
+        - 5.9.0
+        - 5.10.0
+        - 5.13.0
+        - 5.16.1
+        - 6.5.2
+        - 6.5.3
+        - 6.7.1
+        - 6.9.0
+        - 6.9.1
+        - 6.9.2
+        - 7.0.0
+        - 7.0.1
+        - 7.1.1
+        - 7.1.2
+        - 7.1.5
+        - 7.1.6
+        - 7.1.7
+        - 7.1.8
+        - 7.2.0
+        - 7.2.1
+        - 7.3.1
+        - 7.4.1
+        - 7.4.2
+        - 7.4.3
+        - 7.5.1
+        - 7.5.2
+        - 7.5.3
+        - 7.6.0
+        - 8.0.1
+        - 8.1.0
+        - 8.2.0
+        - 8.3.1
+        - 9.0.0-preview.14
+        - 9.0.0-preview.34
+        - 9.0.0-preview.55
+        - 9.0.0-preview.72
+        - 10.0.0-preview.27
+        - 10.1.0
+        - 10.2.0
+        - 10.2.1
+        - 10.2.2
+        - 10.3.1
+        - 10.3.2
+        - 10.4.0
+        compatible:
+        - 10.3.2
+        - 10.4.0
+        verified: 10.3.2
+      dependencies:
+      - name: com.unity.render-pipelines.core
+        version: 10.3.2
+      - name: com.unity.searcher
+        version: 4.3.1
+      resolvedDependencies:
+      - name: com.unity.render-pipelines.core
+        version: 10.3.2
+      - name: com.unity.ugui
+        version: 1.0.0
+      - name: com.unity.modules.ui
+        version: 1.0.0
+      - name: com.unity.modules.imgui
+        version: 1.0.0
+      - name: com.unity.searcher
+        version: 4.3.1
+      keywords: []
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637502285180000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: git+https://github.com/Unity-Technologies/Graphics.git
+        revision: 1342255ea41f4ab7910113c8dc207aecdfd4cf8e
         path: 
     - packageId: com.unity.2d.common@4.0.3
       testable: 0
@@ -2867,8 +3692,25 @@ m_PackageAssets:
       errors: []
       versions:
         all:
+        - 1.0.9-preview.1
+        - 1.0.9-preview.2
+        - 1.0.10-preview
+        - 1.0.11-preview.1
+        - 1.1.0-preview.1
+        - 1.1.0-preview.2
+        - 1.2.0-preview.1
+        - 2.0.1
+        - 2.0.2
+        - 2.1.0
+        - 3.0.0
+        - 3.0.1
+        - 4.0.0
+        - 4.0.1
         - 4.0.2
         - 4.0.3
+        - 5.0.0-pre.1
+        - 5.0.0-pre.2
+        - 5.0.0
         compatible:
         - 4.0.2
         - 4.0.3
@@ -2905,7 +3747,7 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637408843940000000
       documentationUrl: 
       hasRepository: 1
       repository:
@@ -2935,7 +3777,23 @@ m_PackageAssets:
       errors: []
       versions:
         all:
+        - 1.0.0-preview.1
+        - 1.0.0-preview.4
+        - 2.0.1
+        - 2.0.2
+        - 2.0.3
+        - 2.0.4
+        - 2.0.5
+        - 2.0.6
+        - 2.1.0
+        - 3.0.0
+        - 3.0.1
+        - 3.0.2
+        - 4.0.0
         - 4.0.1
+        - 5.0.0-pre.1
+        - 5.0.0-pre.2
+        - 5.0.0
         compatible:
         - 4.0.1
         verified: 4.0.1
@@ -2956,13 +3814,64 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637328350450000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/2d.git
         revision: 7d7470f4ca0ea8353d4c9640b3b6ae9d1ebd9c1d
+        path: 
+    - packageId: com.unity.searcher@4.3.1
+      testable: 0
+      isDirectDependency: 0
+      version: 4.3.1
+      source: 1
+      resolvedPath: C:\Users\GameDesign\Documents\Git Projects\Hank\HandyHank\Handy
+        Hank\Library\PackageCache\com.unity.searcher@4.3.1
+      assetPath: Packages/com.unity.searcher
+      name: com.unity.searcher
+      displayName: Searcher
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: General search window for use in the Editor. First target use
+        is for GraphView node search.
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 4.3.1
+        compatible:
+        - 4.3.1
+        verified: 4.3.1
+      dependencies: []
+      resolvedDependencies: []
+      keywords:
+      - search
+      - searcher
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 0
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.cds.internal.unity3d.com/unity/com.unity.searcher.git
+        revision: 56c3321cb776740e60e242e6c72cb5b4e8245256
         path: 
   m_LocalPackages:
     m_LocalFileStatus: []
