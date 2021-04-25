@@ -7,7 +7,9 @@ public class GameManager : MonoBehaviour
     public SceneHandler sceneHandler;
     public Camera ActiveCamera;
     public GameObject player;
-
+    public GameObject WorldGrids;
+    
+    
     public int GameState;
 
 
@@ -24,5 +26,9 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+    public void GenerateChunkPrefabs()
+    {
+
     }
 }

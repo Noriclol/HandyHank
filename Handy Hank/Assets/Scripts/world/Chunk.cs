@@ -8,6 +8,7 @@ public class Chunk : MonoBehaviour
     public ChunkData data;
     public Vector3 chunkPos;
     public List<Tile> tiles;
+    public Tilemap ChunkMap;
     public Tilemap tilemap;
     int chunkSize = 16;
 
