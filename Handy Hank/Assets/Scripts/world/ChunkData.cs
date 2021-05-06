@@ -5,19 +5,26 @@ using UnityEngine.Tilemaps;
 
 
 
-public struct ChunkData
+public class ChunkData
 {
-    public Vector2 Pos;
+    public Vector2Int Pos;
 
-    public chunkBiome biome;
+    public ChunkBiome biome;
     public Tile whiteboxChunk;
-    public List<Tile> tiles;
-
+    //public List<Tile> tiles;
+    //public List<GameObject> structures;
+    //public List<GameObject> characters;
+    public ChunkData(Vector2Int Pos, ChunkBiome biome, Tile WB) {
+        this.Pos = Pos;
+        this.whiteboxChunk = WB;
+        this.biome = biome;
+    }
 }
 
-public enum chunkBiome
+public enum ChunkBiome
 {
     ocean,
     Grass,
     City,
 }
+
